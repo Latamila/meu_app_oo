@@ -1,11 +1,11 @@
 import 'package:meu_app_oo/classes/Pessoa.dart';
 
-void main(List<String> argumentsj){
+void main(List<String> arguments){
 
-  var p1 = new Pessoa();
-  p1.setNome('Danila');
-  p1.setEndereco('rua 1');
-
+  var p1 = new Pessoa('Danila','rua 1');
   print(p1);
+
+  var pessoaFisica1 = new PessoaFisica("Camila", "rua 1","22222222");
+  print(pessoaFisica1);
 
 }
