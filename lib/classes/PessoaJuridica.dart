@@ -1,23 +1,7 @@
-class PessoaJuridica {
-  String _nome = '';
-  String _endereco = '';
+import 'package:meu_app_oo/classes/Pessoa.dart';
+
+class PessoaJuridica extends Pessoa {
   String _cnpj = '';
-  
-  void setNome(String nome) {
-    _nome = nome;
-  }
-
-  String getNome() {
-    return _nome;
-  }
-
-  void setEndereco(String endereco) {
-    _endereco = endereco;
-  }
-
-  String getEndereco() {
-    return _endereco;
-  }
 
   void setCnpj(String cnpj) {
     _cnpj = cnpj;
@@ -27,17 +11,16 @@ class PessoaJuridica {
     return _cnpj;
   }
 
-  PessoaJuridica(String nome, String endereco, String cnpj) {
-    _nome = nome;
-    _endereco = endereco;
+  PessoaJuridica(String nome, String endereco, String cnpj)
+  : super(nome, endereco) {
     _cnpj = cnpj;
   }
   
   @override
   String toString() {
     return{
-      "Nome": _nome,
-      "Endereço": _endereco,
+      "Nome": super.getNome(),
+      "Endereço": super.getEndereco(),
       "Cnpj": _cnpj
     }.toString();
   }

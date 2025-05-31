@@ -1,24 +1,8 @@
-class PessoaFisica {
-  String _nome = '';
-  String _endereco = '';
+import 'package:meu_app_oo/classes/Pessoa.dart';
+
+class PessoaFisica extends Pessoa{
   String _cpf = '';
   
-  void setNome(String nome) {
-    _nome = nome;
-  }
-
-  String getNome() {
-    return _nome;
-  }
-
-  void setEndereco(String endereco) {
-    _endereco = endereco;
-  }
-
-  String getEndereco() {
-    return _endereco;
-  }
-
   void setCpf(String cpf) {
     _cpf = cpf;
   }
@@ -27,9 +11,8 @@ class PessoaFisica {
     return _cpf;
   }
 
-  PessoaFisica(String nome, String endereco, String cpf) {
-    _nome = nome;
-    _endereco = endereco;
+  PessoaFisica(String nome, String endereco, String cpf)
+  : super(nome,endereco) {
     _cpf = cpf;
   }
   
@@ -37,8 +20,8 @@ class PessoaFisica {
   String toString() {
     return{
       "Tipo": "PF",
-      "Nome": _nome,
-      "Endereço": _endereco,
+      "Nome": super.getNome(),
+      "Endereço": super.getEndereco(),
       "Cpf": _cpf
     }.toString();
   }
