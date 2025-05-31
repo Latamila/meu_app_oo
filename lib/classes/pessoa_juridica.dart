@@ -1,4 +1,4 @@
-import 'package:meu_app_oo/classes/Pessoa.dart';
+import 'package:meu_app_oo/classes/pessoa.dart';
 
 class PessoaJuridica extends Pessoa {
   String _cnpj = '';
@@ -19,8 +19,8 @@ class PessoaJuridica extends Pessoa {
   @override
   String toString() {
     return{
-      "Nome": super.getNome(),
-      "Endereço": super.getEndereco(),
+      "Nome": getNome(),
+      "Endereço": getEndereco(),
       "Cnpj": _cnpj
     }.toString();
   }

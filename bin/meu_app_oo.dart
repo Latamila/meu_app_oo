@@ -1,6 +1,6 @@
-import 'package:meu_app_oo/classes/Pessoa.dart';
-import 'package:meu_app_oo/classes/PessoaFisica.dart';
-import 'package:meu_app_oo/classes/PessoaJuridica.dart';
+import 'package:meu_app_oo/classes/pessoa.dart';
+import 'package:meu_app_oo/classes/pessoa_fisica.dart';
+import 'package:meu_app_oo/classes/pessoa_juridica.dart';
 
 void main(List<String> arguments){
 
