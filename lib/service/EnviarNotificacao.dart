@@ -6,7 +6,7 @@ import 'package:meu_app_oo/service/impl/NotificacaoPushNotification.dart';
 import 'package:meu_app_oo/service/impl/NotificacaoSMS.dart';
 
 class Enviarnotificacao {
-  Notificacaointerface? notificacao;
+  NotificacaoInterface? notificacao;
 
   void notificar(Pessoa pessoa) {
     switch (pessoa.getTipoNotificacao()) {
@@ -17,7 +17,7 @@ class Enviarnotificacao {
         notificacao = NotificacaoPushNotification();
         break;
       case TipoNotificacao.SMS:
-        notificacao = Notificacaosms();
+        notificacao = NotificacaoSMS();
         break;
       default: 
         break;
